@@ -4,11 +4,14 @@ angular.module('shortly.shorten', [])
   // Your code here
   $scope.link = {};
   $scope.banana = '';
+  console.log('links+++++++++',Links)
   $scope.addLink = function(){
-    Links.add($scope.banana).then(function(token){
-      $window.localStorage.setItem('com.shortly', token);
+    Links.add($scope.banana).then(function(link){
+
+      // $window.localStorage.setItem('com.shortly', token);
+      Links.newLink;
         $location.path('/links');
-      console.log('token++++++++++', token)
+      console.log('links++++++++++', Links)
     })
     .catch(function (error) {
       console.error(error);

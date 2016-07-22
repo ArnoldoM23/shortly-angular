@@ -1,6 +1,4 @@
 <div id='container' ng-controller='LinksController'>
   <!-- Your html here -->
-  <input type='text' placeholder="Enter link here">
-  <button>Get Link</button>
-  <div ng-repeat='link in links'>{{ links }}</div>
+  <div ng-show= 'true' ng-repeat='link in data.links'>{{ (link) }} </div>
 </div>
