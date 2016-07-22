@@ -67,6 +67,7 @@ module.exports = {
         }
       })
       .fail(function (error) {
+        console.log('is this the error')
         next(error);
       });
   },

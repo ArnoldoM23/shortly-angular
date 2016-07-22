@@ -8,12 +8,23 @@ angular.module('shortly.services', [])
       url: '/api/links',
       contentType: 'application/json',
     }).then(function(resp){
-      console.log('resp+++++++++ in factory', resp.data);
       return resp.data;
     })
   }
+  var add = function(link){
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      contentType: 'application/json',
+      data: {url: link},
+    }).then(function(resp){
+      return resp
+      console.log('resp++++++++++', resp)
+    })
+  }
   return {
-    "get": get
+    get: get,
+    add: add
   }
 })
 .factory('Auth', function ($http, $location, $window) {
