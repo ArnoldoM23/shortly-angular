@@ -7,7 +7,7 @@ angular.module('shortly.shorten', [])
   $scope.addLink = function(){
     Links.add($scope.banana).then(function(link){
       console.log('checking link in shorten', link)
-      // $location.path('/links');
+      $location.path('/links');
     })
     .catch(function (error) {
       console.error(error);

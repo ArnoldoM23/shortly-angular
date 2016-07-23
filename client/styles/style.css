@@ -38,6 +38,7 @@ h1 {
   padding: 10px;
   display: block;
   text-align: center;
+  font-size: 50px;
 }
 
 .navigation li a:hover {
