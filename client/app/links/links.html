@@ -1,14 +1,17 @@
 <div ng-click= "navToLink()"id='container' ng-controller='LinksController'>
   <!-- Your html here -->
   <input type='text' placeholder="Enter link here" ng-model="banana">
-  <button ng-click="addLink()">Get Link</button>
+  <md-button ng-click="addLink()">Get Link</md-button>
+  <md-button >
+   <md-icon  ng-style="{color: 'green', 'font-size':'36px', height:'36px'}">
+</md-button>
   <div ng-click= "navToLink()" ng-show= 'true' ng-repeat='link in data.links | filter:banana'>
     <img src='assets/redirect_icon.png'/>
      <div class='info'>
     <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
     <div class='title'>{{link.title}}</div>
     <div class='original'>{{link.url }}</div>
-    <a ng-click= "navToLink()" href={{link.base_url}}/{{"api/links"}}/{{link.code}}>{{link.base_url}}/{{"api/links"}}/{{link.code}}</a>
+    <a ng-click= "navToLink()" href={{link.base_url}}/{{"api/links"}}/{{link.code}}>{{link.base_url}}/{{link.code}}</a>
   </div>
   </div>
 </div>
